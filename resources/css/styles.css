@@ -1,2 +1,74 @@
 @import url('reset.css');
 @import url('colores.css');
+
+:root {
+    --alturaHeader: 240px;
+}
+
+header {
+    position: relative;
+    height: var(--alturaHeader);
+    background-color: var(--color-primario);
+}
+
+.textoBienvenida {
+    position: absolute;
+    bottom: 50px;
+    width: 90%;
+    left: 5%;
+    color: white; /* Añadido para que se lea sobre el fondo */
+}
+
+.buscador {
+    position: absolute;
+    bottom: -30px;
+    left: 10%;
+    height: 60px;
+    width: 80%;
+    background-color: var(--color-buscador);
+    display: flex;
+    align-items: center;
+}
+
+.buscador input[type="text"] {
+    flex: 1;
+    height: 100%;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+}
+
+.buscador i {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-icono-buscador);
+}
+
+.buscador button {
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-icono-buscador);
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    /* Descuenta la altura del header para que ocupe el resto de la pantalla */
+    min-height: calc(100dvh - var(--alturaHeader)); 
+    background-color: var(--color-fondo-main);
+    padding-top: 40px; /* Espacio de cortesía para que el buscador no tape el contenido del main */
+}
+
+.categorias {
+    height: 80px;
+    background-color: var(--color-categorias);
+}
+
+.restaurant {
+    min-height: 300px;
+    background-color: var(--color-resto);
+}

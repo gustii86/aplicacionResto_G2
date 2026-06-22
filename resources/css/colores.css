@@ -1,0 +1,8 @@
+:root {
+    --color-primario: #5f6ff3; /* El azul del header de las capturas */
+    --color-fondo-main: #a52a2a; /* El 'brown' de prueba */
+    --color-categorias: #adff2f; /* El 'greenyellow' */
+    --color-resto: #ff0000; /* El rojo de la sección de restaurante */
+    --color-buscador: #9e8e34;
+    --color-icono-buscador: #d0d679;
+}
