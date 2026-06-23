@@ -8,67 +8,70 @@
 header {
     position: relative;
     height: var(--alturaHeader);
-    background-color: var(--color-primario);
-}
-
-.textoBienvenida {
-    position: absolute;
-    bottom: 50px;
-    width: 90%;
-    left: 5%;
-    color: white; /* Añadido para que se lea sobre el fondo */
+    background-color: rgb(111, 111, 243);
 }
 
 .buscador {
+    display: flex;
     position: absolute;
     bottom: -30px;
     left: 10%;
     height: 60px;
     width: 80%;
-    background-color: var(--color-buscador);
-    display: flex;
-    align-items: center;
+    background-color: rgb(158, 142, 52);
 }
 
 .buscador input[type="text"] {
-    flex: 1;
-    height: 100%;
-    padding: 0 15px;
-    border: none;
-    outline: none;
-}
+        flex:1;
+        height: 100%;
+        padding: 0 20px;
+    i {
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-items: center;
+        background-color: rgb(255, 255, 255);
+        }
 
-.buscador i {
-    width: 60px;
-    height: 60px;
-    display: grid;
-    place-items: center;
-    background-color: var(--color-icono-buscador);
+    button {
+        width: 60px;
+        height: 60px;
+        display: grid;
+        place-items: center;
+        background-color: rgb(255, 255, 255);
+    }
 }
-
-.buscador button {
-    width: 60px;
-    height: 60px;
-    display: grid;
-    place-items: center;
-    background-color: var(--color-icono-buscador);
-    border: none;
-    cursor: pointer;
+.textoBienvenida {
+    position: absolute;
+    bottom: 50px;
+    width: 90%;
+    left: 5%;
 }
 
 main {
-    /* Descuenta la altura del header para que ocupe el resto de la pantalla */
-    min-height: calc(100dvh - var(--alturaHeader)); 
-    background-color: var(--color-fondo-main);
-    padding-top: 40px; /* Espacio de cortesía para que el buscador no tape el contenido del main */
+    min-height: calc(100dvh - var(--alturaHeader));
+    background-color: red
 }
 
 .categorias {
-    height: 100px;
-    background-color: var(--color-categorias);
+    height: 120px;
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    overflow: auto hidden;
 }
+.item-cate{
+    flex: 0 0 80px;
 
-.restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px gray;
+    padding: 6px;
+}
+.resto {
     min-height: 300px;
-    background-color: var(--color-resto);
+    background-color: rgb(209, 15, 226);
 }
